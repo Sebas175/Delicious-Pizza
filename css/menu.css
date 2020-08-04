@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+header{
+    grid-area: header;
+}
+
+/*header div{
+    display: flex;
+    justify-content: space-between;
+}*/
+
+.logo{
+    background: rgba(0,0,0,0.6);
+    min-height: 50px;
+    width: 100%;
+    padding: 20px;
+    color: #FFF;
+    align-items: center;
+/*    position: absolute;
+    top: 0px;*/
+}
+
+.logo h2{
+    margin-left: 15px;
+}
+
+.menu ul li{
+    display: inline-block;
+    width: 90px;
+}
+
+/*.menu ul li:not(.last)::after{
+    content: "/";
+    color: goldenrod;
+    padding-left: 25px;
+}*/
+
+.menu ul li a{
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.menu ul li a:hover{
+    border-bottom: 1px solid goldenrod;
+}
+
+section{
+    grid-area: section;
+    margin: 40px;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card{
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card h3, hr, p, h4{
+    margin-bottom: 15px;
+}
+
+hr{
+    border-top: 1px solid #CCC;
+}
+
+.card button{
+    width:25%;
+    font-size: 16px;
+    padding: 1rem;
+    background-color: goldenrod;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: darkgoldenrod;
+}
+
+footer{
+    background-color: #000;
+    color: #FFF;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    grid-area: footer;
+}
+
+
+/*----- Mobile -----*/
+@media (max-width: 795px)
+{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "section"
+        "footer";
+    }
+
+    /*----- Header -----*/
+
+    header .logo{
+        background-color: #000;
+        display: grid;
+        justify-content: center;
+    }
+
+    .menu{
+        padding-top: 10px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .logo h2{
+        font-size: 30px;
+    }
+
+    .logo .menu{
+        font-size: 10px;
+    }
+
+    .menu ul li{
+        width: 70px;
+    }
+
+    .menu ul li:not(.last)::after{
+        content: "/";
+        color: goldenrod;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .menu ul li a{
+        font-size: 13px;
+    }
+
+    /*----- Section -----*/
+    .card button{
+        width: 100%;
+        font-size: 20px;
+        padding: 1rem;
+
+    }
+}
+
+/*----- Tablet -----*/
+@media (min-width: 796px) and (max-width: 1199px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header"
+        "section section"
+        "footer footer";
+    }
+
+    /*----- Header -----*/
+    header .logo{
+        background-color: #000;
+        display: grid;
+        justify-content: center;
+    }
+
+    .menu{
+        padding-top: 10px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .logo h2{
+        font-size: 30px;
+    }
+
+    .logo .menu{
+        font-size: 10px;
+    }
+
+    .menu ul li{
+        width: 70px;
+    }
+
+    .menu ul li:not(.last)::after{
+        content: "/";
+        color: goldenrod;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .menu ul li a{
+        font-size: 13px;
+    }
+
+    /*----- Section -----*/
+    section{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .card button{
+        display: grid;
+        justify-content: center;
+    }
+
+}
+
+/*----- Computadora -----*/
+@media (min-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header"
+        "section section section"
+        "footer footer footer";
+    }
+
+    /* Header*/
+    header div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        position: absolute;
+        top: 0px;
+    }
+
+    .menu ul li:not(.last)::after{
+        content: "/";
+        color: goldenrod;
+        padding-left: 15px;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+    
+    }
+
+
+}
