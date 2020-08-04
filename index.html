@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delicious Pizza</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="encabezado">
+            <h2>Delicious pizza</h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li class="last"><a href="contacto.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="texto-principal">
+        <div class="descripcion">
+            <h1>Delicious pizza!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, rerum minus doloribus pariatur ut et commodi fuga facere eligendi officiis consectetur, est neque! Quaerat laboriosam unde nostrum eaque aut cupiditate.</p>
+            <button>Ver menú</button>
+        </div>
+    </div>
+    </header>
+    <div class="contener">
+    <section id="Pizzas">
+    <div class="explicacion">
+        <h2>Delicious pizza!</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, doloremque tenetur a perferendis repudiandae perspiciatis minus doloribus temporibus alias sunt sequi porro quaerat, sit nostrum, ab magnam eligendi possimus incidunt.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis dolorum labore laboriosam doloribus consequatur commodi a similique expedita magnam sint. Sint pariatur mollitia quidem nisi enim, dolor eos optio voluptates?</p>
+        <h2>Our pizzas!</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate iste nostrum aspernatur adipisci dolorum sed ratione dolor, eos facilis quaerat natus nemo rerum saepe error quae ea officiis officia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate iste nostrum aspernatur adipisci dolorum sed ratione dolor, eos facilis quaerat natus nemo rerum saepe error quae ea officiis officia.</p>
+    </div>
+    </section>
+    <aside>
+        <video width="400" controls autoplay>
+            <source type="video/mp4" src="video/pizza.mp4">
+        </video>
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere reiciendis aliquid doloremque. Et aperiam iure architecto placeat nemo fugit vitae nostrum ab nobis officiis nesciunt deleniti possimus, expedita assumenda!</p>
+    </aside>
+</div>
+    <footer>
+        &copy; Derechos reservados
+    </footer>
+</div>
+</body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v7.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="114911776823019"
+logged_in_greeting="¡Bienvenidos a Delicious Pizza!"
+logged_out_greeting="¡Bienvenidos a Delicious Pizza!">
+</div>
+</html>

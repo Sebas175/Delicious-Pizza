@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #F7F7F7;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template: auto auto auto / auto auto;
+    grid-template-areas: 
+    "header header"
+    "section section"
+    "footer footer";
+}
+
+header{
+grid-area: header;
+width: 100%;
+background-color: #000;
+}
+
+section{
+    margin:40px;
+    grid-area: section;
+    display: grid;
+}
+
+h1{
+margin-bottom: 15px;
+margin-left: 215px;
+}
+
+.contact{
+    display: grid;
+    grid-template: auto / repeat(2, auto);
+    grid-template-areas: 
+    "formu ifra";
+}
+
+.formulario{
+    grid-area: formu;
+    /*flex-basis: 50%;*/
+    margin-right: 10px;
+}
+
+form{
+    display: grid;
+    grid-template: repeat(7, auto) / repeat(2, auto);
+    grid-template-areas: 
+    "lnombre lapellidos"
+    "nombre apellidos"
+    "lcorreo ltel"
+    "correo tel"
+    "lcomen ."
+    "comentarios comentarios"
+    "enviar enviar";
+}
+
+
+.lnombre{
+    grid-area: lnombre;
+}
+
+.nombre{
+    grid-area: nombre;
+}
+
+.lapellidos{
+    grid-area: lapellidos;
+}
+
+.apellidos{
+    grid-area: apellidos;
+}
+
+.lcorreo{
+    grid-area: lcorreo;
+}
+
+.correo{
+    grid-area: correo;
+}
+
+.ltel{
+    grid-area: ltel;
+}
+
+.tel{
+    grid-area: tel;
+}
+
+.lcomen{
+    grid-area: lcomen;
+}
+
+.enviar{
+    justify-self: center;
+    grid-area: enviar;
+}
+
+.comentarios{
+    background-color: #e5f3fc;
+    grid-area: comentarios;
+}
+
+label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label, h1{
+    color: #007ac1;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    background-color: #e5f3fc;
+    height: 48px;
+    width: 98%;
+    border: 0;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+textarea{
+    border-radius: 5px;
+    font-size: 19px;
+    border: 0;
+    resize: none;
+}
+
+input[type="submit"]{
+margin-top: 10px;
+font-weight: bold;
+color: #FFF;
+background-color: #007ac1;
+height: 48px;
+width: 300px;
+border: 0;
+border-radius: 5px;
+}
+
+iframe{
+    grid-area: ifra;
+}
+
+footer{
+    grid-area: footer;
+}
+
+@media (max-width: 795px){
+    .container{
+        display: grid;
+        grid-template: auto auto auto / auto;
+        grid-template-areas: 
+        "header"
+        "section"
+        "footer";
+    }
+
+        /*----- Header -----*/
+
+        header .encabezado{
+            background-color: #000;
+            display: grid;
+            justify-content: center;
+        }
+    
+        .menu{
+            padding-top: 10px;
+            display: grid;
+            justify-content: center;
+        }
+    
+        .encabezado h2{
+            font-size: 30px;
+        }
+    
+        .logo .menu{
+            font-size: 10px;
+        }
+    
+        .menu ul li{
+            width: 70px;
+        }
+    
+        .menu ul li:not(.last)::after{
+            content: "/";
+            color: goldenrod;
+            padding-left: 10px;
+            font-size: 13px;
+        }
+    
+        .menu ul li a{
+            font-size: 13px;
+        }
+
+
+        section{
+            margin: 20px;
+        }
+
+        .contact{
+            display: grid;
+            grid-template: repeat(2, auto) / repeat(1, auto);
+            grid-template-areas: 
+            "formu"
+             "ifra";
+        }
+
+    h1{
+        margin-left: 0;
+        text-align: center;
+    }
+    form{
+        display: grid;
+        grid-template: repeat(14, auto) / repeat(1, auto);
+        grid-template-areas: 
+        "lnombre"
+        "nombre"
+        "lapellidos"
+        "apellidos"
+        "lcorreo"
+        "correo"
+        "ltel"
+        "tel"
+        "lcomen"
+        "comentarios"
+        "enviar";
+    }
+
+    input[type="text"]{
+        width: 100%;
+    }
+
+    iframe{
+        margin-top:20px;
+        width: 100%;
+    }
+    
+    
+}
+
+@media (min-width: 796px) and (max-width: 1199px){
+    .container{
+        display: grid;
+        grid-template: auto / auto;
+        grid-template-areas: 
+        "header"
+        "section"
+        "footer";
+    }
+
+    /*----- Header -----*/
+
+    header .encabezado{
+        background-color: #000;
+        display: grid;
+        justify-content: center;
+    }
+
+    .encabezado h2{
+        font-size: 30px;
+    }
+
+    .encabezado .menu{
+        font-size: 10px;
+    }
+
+    .menu{
+        padding-top: 10px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .menu ul li{
+        width: 70px;
+    }
+
+    .menu ul li:not(.last)::after{
+        content: "/";
+        color: goldenrod;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .menu ul li a{
+        font-size: 13px;
+    }
+
+    section{
+        margin: 20px;
+    }
+
+
+    .contact{
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(1, auto);
+        grid-template-areas: 
+        "formu"
+         "ifra";
+    }
+
+h1{
+    margin-left: 0;
+    text-align: center;
+}
+form{
+    display: grid;
+    grid-template: repeat(14, auto) / repeat(1, auto);
+    grid-template-areas: 
+    "lnombre"
+    "nombre"
+    "lapellidos"
+    "apellidos"
+    "lcorreo"
+    "correo"
+    "ltel"
+    "tel"
+    "lcomen"
+    "comentarios"
+    "enviar";
+}
+
+input[type="text"]{
+    width: 100%;
+}
+
+iframe{
+    margin-top:20px;
+    width: 100%;
+}
+}
+
+@media (min-width: 1200px){
+    input[type="text"]{
+        padding-right: 20px;
+    }
+}
